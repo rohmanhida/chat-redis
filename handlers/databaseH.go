@@ -10,9 +10,11 @@ import (
 )
 
 func InitRedis() *redis.Client {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	if os.Getenv("RAILWAY_ENVIRONMENT") == "" {
+		// We're probably in local dev
+		if err := godotenv.Load(); err != nil {
+			log.Println("No .env file found (this is OK in production)")
+		}
 	}
 
 	// Get Redis URL
