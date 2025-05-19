@@ -10,9 +10,9 @@ var Mux = http.NewServeMux()
 
 func MuxHandler() http.Handler {
 	handler := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173", "http://chat-sv.netlify.app"}, // Svelte dev server
+		AllowedOrigins:   []string{"http://localhost:5173", "https://chat-sv.netlify.app"}, // Svelte dev server
 		AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
-		AllowedHeaders:   []string{"Authorization", "Content-Type"},
+		AllowedHeaders:   []string{"Content-Type", "Authorization" },
 		AllowCredentials: true,
 	}).Handler(Mux)
 
