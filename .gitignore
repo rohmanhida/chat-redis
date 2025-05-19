@@ -1,0 +1,42 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, compiled output
+*.test
+*.out
+
+# Output of `go build`
+/bin/
+/build/
+/dist/
+*.a
+
+# Object files
+*.o
+*.obj
+
+# Go workspace
+go.work
+go.work.sum
+
+# Dependency management
+vendor/
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
